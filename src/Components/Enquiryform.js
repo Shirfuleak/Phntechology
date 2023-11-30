@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import jsonData from '../Data/states-and-districts.json'
+import jsonData from '../data/states-and-districts.json'
 import logo from '../assets/phn_logo_dark.svg';
 import poster from '../assets/poster.png'
-import './Form.css'
+import '../style/Form.css'
 const Enquiryform = () => {
   const intialValues={
     firstname: "",
@@ -64,7 +64,7 @@ const Enquiryform = () => {
     const newErrors = {};
     const onlyAlphabets = /^[A-Za-z]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const validMobileNumber = /^[0-9]*$/;
+    const validMobileNumber = /^[0-9]{6,10}$/;
 
     if (formData.firstname === '' || !onlyAlphabets.test(formData.firstname)) {
       newErrors.firstname = 'firstname is required and should contain only alphabet';
@@ -78,7 +78,7 @@ const Enquiryform = () => {
       newErrors.email = 'Valid email is required';
     }
 
-    if (formData.whatsappnumber === '' || !validMobileNumber.test(formData.whatsappnumber)) {
+    if (formData.whatsappnumber === ''  || !validMobileNumber.test(formData.whatsappnumber)) {
       newErrors.whatsappnumber = 'Number is required and should contain only digits';
     }
 
@@ -117,7 +117,7 @@ const Enquiryform = () => {
     <>
       
       {/* <img src={logo} className="m-3"/> */}
-      <div className="row">
+      <div className="row mx-5">
         <div className="col mx-5">
         <img src={poster} className="mx-5 img-fluid"/>
         </div>

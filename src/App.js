@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 // import './App.css';
-import Enquiryform from './Components/Enquiryform';
+import Enquiryform from './components/Enquiryform';
 
 function App() {
   return (
