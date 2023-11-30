@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import jsonData from '../data/states-and-districts.json'
+import jsonData from '../Data/states-and-districts.json'
 import poster from '../assets/poster.png'
 import '../style/Form.css'
 const Enquiryform = () => {
