@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import jsonData from '../data/states-and-districts.json'
-import logo from '../assets/phn_logo_dark.svg';
 import poster from '../assets/poster.png'
 import '../style/Form.css'
 const Enquiryform = () => {
@@ -32,14 +31,14 @@ const Enquiryform = () => {
   }, []);
 
   const generateRandomNumbers = () => {
-    const num1 = Math.floor(Math.random() * 10) + 1; // Generate a random number between 1 and 10
-    const num2 = Math.floor(Math.random() * 10) + 1; // Generate another random number between 1 and 10
+    const num1 = Math.floor(Math.random() * 10) + 1; 
+    const num2 = Math.floor(Math.random() * 10) + 1; 
     setFormdata({
       ...formData,
       number1: num1,
       number2: num2,
-      answer: num1 + num2, // Calculate the sum of the two numbers
-      userAnswer: "", // Reset user's answer
+      answer: num1 + num2,
+      userAnswer: "", 
     });
     
   };
@@ -53,7 +52,7 @@ const Enquiryform = () => {
     const selectedState = event.target.value;
     const selectedDistricts = jsonData.states.find(
       (state) => state.state === selectedState
-    ).districts // Assuming each district is an object with a 'name' property
+    ).districts 
     setFormdata({ ...formData, state: selectedState, district: "" });
     setDistricts(selectedDistricts);
   };
@@ -116,10 +115,9 @@ const Enquiryform = () => {
   return (
     <>
       
-      {/* <img src={logo} className="m-3"/> */}
       <div className="row mx-5">
         <div className="col mx-5">
-        <img src={poster} className="mx-5 img-fluid"/>
+        <img src={poster} className="mx-5 img-fluid" alt='poster'/>
         </div>
       </div>
     <strong><h1 className="text-center mt-1 headingtext">Apply</h1></strong>
@@ -240,7 +238,6 @@ const Enquiryform = () => {
               onChange={handleInputChange}
             />
             {errors.highestqualification && <span className="text-danger mx-2">{errors.highestqualification}</span>} 
-            {/* <div className="d-flex"></div> */}
 
             <button
               onClick={handleSubmit}
