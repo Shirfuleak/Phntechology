@@ -1,0 +1,31 @@
+.submitbtn{
+  background-color: #2643d4;
+  color: white;
+  padding: 8px 16px; 
+  border: none;
+  border-radius: 4px; 
+  cursor: pointer;
+}
+
+.numbtn{
+    background-color: #6099bc;
+    color: white;
+    padding: 8px 16px; 
+    border: none;
+    border-radius: 4px; 
+
+  }
+.last-col{
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .last-col {
+      display: none;
+    }
+  }
+
+.headingtext{
+    color: #1328c2;
+    text-decoration: double;
+}
