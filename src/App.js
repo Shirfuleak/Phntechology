@@ -1,4 +1,4 @@
-import Enquiryform from './components/Enquiryform';
+import Enquiryform from './Components/Enquiryform';
 
 function App() {
   return (
